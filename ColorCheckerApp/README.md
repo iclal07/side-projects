@@ -47,6 +47,3 @@ Bu ekranda, kullanıcının belirttiği renk kombinasyonlarına göre arka plan 
 
 Eğer projeye katkıda bulunmak isterseniz, lütfen bir pull request gönderin veya bir sorun (issue) açın. Her türlü katkı ve geri bildiriminiz bizim için değerlidir! 🙌
 
-## 📄 Lisans
-
-Bu proje MIT Lisansı altında lisanslanmıştır. Daha fazla bilgi için `LICENSE` dosyasını inceleyebilirsiniz.
