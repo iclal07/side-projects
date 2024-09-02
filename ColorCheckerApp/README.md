@@ -20,7 +20,7 @@
 2. Python dosyasını çalıştırın:
 
     ```bash
-    streamlit run color_checker.py
+    streamlit run app.py
     ```
 
 ## 📚 Kullanım
