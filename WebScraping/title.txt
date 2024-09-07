@@ -1,0 +1,59 @@
+Title: New Training Courses, Link: https://glomacs.com/new-training-courses
+Title: Executive Development, Link: https://glomacs.com/training-courses/executive-development
+Title: Management & Leadership, Link: https://glomacs.com/training-courses/management-leadership
+Title: Creativity & Innovation, Link: https://glomacs.com/training-courses/creativity-innovation
+Title: Personal Effectiveness, Link: https://glomacs.com/training-courses/personal-effectiveness
+Title: Strategy & Strategic Planning, Link: https://glomacs.com/training-courses/strategy-strategic-planning
+Title: Corporate Governance, Compliance, & Risk Management, Link: https://glomacs.com/training-courses/corporate-governance-compliance-risk-management
+Title: Business Process Management, Link: https://glomacs.com/training-courses/business-process-management
+Title: Corporate Communication, Link: https://glomacs.com/training-courses/corporate-communication
+Title: Customer Service, Link: https://glomacs.com/training-courses/customer-service
+Title: Learning & Development, Link: https://glomacs.com/training-courses/learning-development
+Title: Media Skills & Public Relations (PR), Link: https://glomacs.com/training-courses/media-public-relations
+Title: Office Administration, Link: https://glomacs.com/training-courses/office-administration
+Title: Sales & Marketing, Link: https://glomacs.com/training-courses/sales-marketing
+Title: Sustainability & CSR, Link: https://glomacs.com/training-courses/sustainability-csr
+Title: HR Management, Link: https://glomacs.com/training-courses/human-resource-management
+Title: Civil & Construction Management, Link: https://glomacs.com/training-courses/civil-construction-engineering
+Title: Contracts Management, Link: https://glomacs.com/training-courses/contracts-management
+Title: Project Management, Link: https://glomacs.com/training-courses/project-management
+Title: Public Private Partnership (PPP), Link: https://glomacs.com/training-courses/public-private-partnership-ppp
+Title: Purchasing, Logistics & Supply Chain Management, Link: https://glomacs.com/training-courses/purchasing-logistics-supply-chain-management
+Title: Quality & Audit, Link: https://glomacs.com/training-courses/audit-and-quality
+Title: Banking & Financial Regulation, Link: https://glomacs.com/training-courses/banking-and-financial-regulation
+Title: Finance & Budgeting, Link: https://glomacs.com/training-courses/finance-budgeting
+Title: Tax and Revenue, Link: https://glomacs.com/training-courses/tax-and-revenue
+Title: Joint Venture, Link: https://glomacs.com/training-courses/joint-venture
+Title: Fraud & Financial Audit, Link: https://glomacs.com/training-courses/fraud-financial-audit
+Title: Treasury & Investment Management, Link: https://glomacs.com/training-courses/treasury-investment-management
+Title: Real Estate Investment & Finance, Link: https://glomacs.com/training-courses/real-estate-investment-finance
+Title: Digital Transformation, Link: https://glomacs.com/training-courses/digital-transformation
+Title: Data Management & Analytics, Link: https://glomacs.com/training-courses/data-management-analytics
+Title: Fintech & Blockchain, Link: https://glomacs.com/training-courses/fintech-blockchain
+Title: Artificial Intelligence (AI), Link: https://glomacs.com/training-courses/artificial-intelligence-ai
+Title: Cybersecurity, Link: https://glomacs.com/training-courses/cybersecurity
+Title: Electrical Engineering, Link: https://glomacs.com/training-courses/electrical-engineering
+Title: Health, Safety & Environment, Link: https://glomacs.com/training-courses/health-safety-environment
+Title: Instrumentation & Process Control, Link: https://glomacs.com/training-courses/instrumentation-process-control
+Title: Maintenance Engineering, Link: https://glomacs.com/training-courses/maintenance-engineering
+Title: Mechanical Engineering, Link: https://glomacs.com/training-courses/mechanical-engineering
+Title: Root Cause Analysis (RCA), Link: https://glomacs.com/training-courses/root-cause-analysis-rca
+Title: Mining Engineering, Link: https://glomacs.com/training-courses/mining-engineering
+Title: Corrosion, Metallurgy & Inspection, Link: https://glomacs.com/training-courses/corrosion-metallurgy-inspection
+Title: Emergency & Crisis Management, Link: https://glomacs.com/training-courses/emergency-crisis-management
+Title: Security Management, Link: https://glomacs.com/training-courses/security-management
+Title: Certified Training Courses, Link: https://glomacs.com/training-courses/certified-courses
+Title: Healthcare Management, Link: https://glomacs.com/training-courses/healthcare-management
+Title: Mini MBA Series, Link: https://glomacs.com/training-courses/mini-mba
+Title: Police and Law Enforcement, Link: https://glomacs.com/training-courses/police-and-law-enforcement
+Title: Public Sector Management & Public Affairs, Link: https://glomacs.com/training-courses/public-sector-management-public-affairs
+Title: Traffic Management, Link: https://glomacs.com/training-courses/traffic-engineering
+Title: Urban Planning and Development, Link: https://glomacs.com/training-courses/urban-planning-and-development
+Title: Agri-Business Development, Link: https://glomacs.com/training-courses/agribusiness-development
+Title: Defence and National Security, Link: https://glomacs.com/training-courses/defence-and-national-security
+Title: Hospitality Management & Tourism Development, Link: https://glomacs.com/training-courses/hospitality-management-tourism-development
+Title: Ships & Port Management, Link: https://glomacs.com/training-courses/ships-port-management
+Title: Social Insurance & Retirement, Link: https://glomacs.com/training-courses/social-insurance-retirement
+Title: Oil & Gas Technology, Link: https://glomacs.com/training-courses/oil-gas-technology
+Title: Energy Transition, Link: https://glomacs.com/training-courses/energy-transition
+Title: Renewable Energy, Link: https://glomacs.com/training-courses/renewable-energy
