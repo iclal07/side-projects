@@ -1,7 +1,9 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-import pandas as pd
-import time
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.action_chains import ActionChains
+import json
 
 # Initialize Selenium WebDriver
 driver = webdriver.Chrome()  # Ensure chromedriver is in your PATH
@@ -10,36 +12,73 @@ driver = webdriver.Chrome()  # Ensure chromedriver is in your PATH
 url = 'https://glomacs.com/training-course/advanced-building-information-modeling'
 driver.get(url)
 
-# Give the page some time to load
-time.sleep(3)
+# Wait until the 'outline-text bg-silver' sections are present
+WebDriverWait(driver, 10).until(
+    EC.presence_of_element_located((By.CLASS_NAME, 'outline-text'))
+)
 
-# Define XPaths for sections and course outline
-sections_xpath = '//*[@id="outline-wrapper"]/div[1]/div[1]/div[5]'
-outline_xpath = '//*[@id="outline-wrapper"]/div[1]/div[1]/div[8]'
+# Define the section titles to look for
+section_titles = {
+    'INTRODUCTION': None,
+    'Objectives': None,
+    'Training Methodology': None,
+    'Organisational Impact': None,
+    'Personal Impact': None,
+    'WHO SHOULD ATTEND?': None
+}
 
-# Create a dictionary to hold the data
-data = {}
-
-# Fetch Course Details
+# Find all sections under the 'outline-text bg-silver' class
 try:
-    sections_element = driver.find_element(By.XPATH, sections_xpath)
-    data['Course Details'] = sections_element.text
-except Exception as e:
-    data['Course Details'] = f"Error: {str(e)}"
+    outline_rows = driver.find_elements(By.CLASS_NAME, 'outline-row')
+    for row in outline_rows:
+        # Scroll to the element to make sure it is visible
+        ActionChains(driver).move_to_element(row).perform()
 
-# Fetch Course Outline
-try:
-    outline_element = driver.find_element(By.XPATH, outline_xpath)
-    data['Course Outline'] = outline_element.text
+        # Find the title of the section
+        try:
+            title_element = row.find_element(By.TAG_NAME, 'h3')
+            title = title_element.text.strip()
+
+            # If the title is in the section_titles dictionary, extract the content
+            if title in section_titles:
+                # Extract content for each section using more flexible XPaths
+                content_elements = row.find_elements(By.XPATH, ".//p | .//ul | .//ol | .//div")
+                content_texts = [el.text.strip() for el in content_elements if el.text.strip()]
+                section_titles[title] = "\n".join(content_texts) if content_texts else None
+        except Exception as e:
+            continue
 except Exception as e:
-    data['Course Outline'] = f"Error: {str(e)}"
+    print(f"Error extracting sections: {e}")
+
+# Extract Course Outline details
+course_outline = []
+
+try:
+    outline_section = driver.find_element(By.CLASS_NAME, 'outline-text.w-border')
+    day_titles = outline_section.find_elements(By.CLASS_NAME, 'day-title')
+    day_descriptions = outline_section.find_elements(By.CLASS_NAME, 'day-description')
+    
+    # Combine each day title and description
+    for title, description in zip(day_titles, day_descriptions):
+        course_outline.append({
+            "Day Title": title.text.strip(),
+            "Day Description": description.text.strip()
+        })
+except Exception as e:
+    course_outline = None  # Assign None if the content is not available
+
+# Add Course Outline to the main data dictionary
+data = section_titles
+data['Course Outline'] = course_outline
 
 # Close the driver
 driver.quit()
 
-# Convert data to a DataFrame
-df = pd.DataFrame(list(data.items()), columns=['Section', 'Content'])
+# Convert data to JSON format
+json_data = json.dumps(data, indent=4)r
 
-# Save to CSV
-df.to_csv('course_details_outline.csv', index=False)
-print("Data saved to 'course_details_outline.csv'")
+# Save to JSON file
+with open('course_details5.json', 'w') as f:
+    f.write(json_data)
+
+print("Data saved to 'course_details.json'")
