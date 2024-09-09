@@ -3,36 +3,36 @@ from selenium.webdriver.common.by import By
 import pandas as pd
 import time
 
-# Set up the Chrome WebDriver
-driver = webdriver.Chrome()  # Simplified as per your request
+# Initialize Selenium WebDriver
+driver = webdriver.Chrome()  # Ensure chromedriver is in your PATH
 
-# Open the webpage
+# Open the target webpage
 url = 'https://glomacs.com/training-course/advanced-building-information-modeling'
 driver.get(url)
 
 # Give the page some time to load
 time.sleep(3)
 
-# Define XPaths for the desired sections
-sections = {
-    'INTRODUCTION': '//*[@id="a0"]/following-sibling::p',
-    'Objectives': '//*[@id="a1"]/following-sibling::ul',
-    'Training Methodology': '//*[@id="a2"]/following-sibling::p',
-    'Organisational Impact': '//*[@id="a3"]/following-sibling::p',
-    'Personal Impact': '//*[@id="a4"]/following-sibling::p',
-    'WHO SHOULD ATTEND?': '//*[@id="a5"]/following-sibling::p',
-    'Course Outline': '//*[@id="a6"]/following-sibling::ul'
-}
+# Define XPaths for sections and course outline
+sections_xpath = '//*[@id="outline-wrapper"]/div[1]/div[1]/div[5]'
+outline_xpath = '//*[@id="outline-wrapper"]/div[1]/div[1]/div[8]'
 
-# Extract data and store in a dictionary
+# Create a dictionary to hold the data
 data = {}
 
-for section, xpath in sections.items():
-    try:
-        element = driver.find_element(By.XPATH, xpath)
-        data[section] = element.text
-    except:
-        data[section] = "Not found"
+# Fetch Course Details
+try:
+    sections_element = driver.find_element(By.XPATH, sections_xpath)
+    data['Course Details'] = sections_element.text
+except Exception as e:
+    data['Course Details'] = f"Error: {str(e)}"
+
+# Fetch Course Outline
+try:
+    outline_element = driver.find_element(By.XPATH, outline_xpath)
+    data['Course Outline'] = outline_element.text
+except Exception as e:
+    data['Course Outline'] = f"Error: {str(e)}"
 
 # Close the driver
 driver.quit()
@@ -41,5 +41,5 @@ driver.quit()
 df = pd.DataFrame(list(data.items()), columns=['Section', 'Content'])
 
 # Save to CSV
-df.to_csv('course_details.csv', index=False)
-print("Data saved to 'course_details.csv'")
+df.to_csv('course_details_outline.csv', index=False)
+print("Data saved to 'course_details_outline.csv'")
