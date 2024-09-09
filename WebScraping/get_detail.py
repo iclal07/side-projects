@@ -41,10 +41,15 @@ try:
 
             # If the title is in the section_titles dictionary, extract the content
             if title in section_titles:
-                # Extract content for each section using more flexible XPaths
-                content_elements = row.find_elements(By.XPATH, ".//p | .//ul | .//ol | .//div")
-                content_texts = [el.text.strip() for el in content_elements if el.text.strip()]
-                section_titles[title] = "\n".join(content_texts) if content_texts else None
+                # Look for content inside the same 'outline-row' div (not inside the h3)
+                try:
+                    # Look for content inside <p>, <ul>, <div>, or <li>
+                    content_elements = row.find_elements(By.XPATH, "./p | ./ul | ./div | ./li")
+                    # Combine all texts into a single string
+                    content_texts = [el.text.strip() for el in content_elements if el.text.strip()]
+                    section_titles[title] = "\n".join(content_texts) if content_texts else None
+                except:
+                    section_titles[title] = None  # If no content found, set as None
         except Exception as e:
             continue
 except Exception as e:
@@ -75,10 +80,10 @@ data['Course Outline'] = course_outline
 driver.quit()
 
 # Convert data to JSON format
-json_data = json.dumps(data, indent=4)r
+json_data = json.dumps(data, indent=4)
 
 # Save to JSON file
-with open('course_details5.json', 'w') as f:
+with open('course_details.json', 'w') as f:
     f.write(json_data)
 
 print("Data saved to 'course_details.json'")
