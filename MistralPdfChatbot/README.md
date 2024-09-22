@@ -98,5 +98,3 @@ Gradio arayüzü açıldıktan sonra, kullanıcı mesajlarını yazabileceğiniz
 
 ## Modülerlik ve Genişletilebilirlik
 Bu proje modüler yapısıyla kolayca genişletilebilir ve özelleştirilebilir. Yeni PDF dosyaları ekleyip modeli yeniden eğitebilir veya chatbot arayüzünü değiştirerek kullanıcı deneyimini geliştirebilirsiniz.
-
-"created by İclal"
